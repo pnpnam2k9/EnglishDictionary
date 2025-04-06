@@ -1,0 +1,88 @@
+body {
+    margin: 0; /* Xóa margin mặc định */
+    font-family: sans-serif; /* Font chữ cơ bản */
+    background-color: #F9F6EF; /* Light Beige - Màu nền */
+    color: #333333; /* Dark Gray - Màu chữ chính */
+    /* Thêm padding-top bằng hoặc lớn hơn chiều cao taskbar để tránh nội dung bị che */
+    padding-top: 70px; /* Điều chỉnh giá trị này dựa trên chiều cao cuối cùng của taskbar */
+}
+
+/* Thanh Taskbar */
+.taskbar {
+    background-color: #718355; /* Olive Green - Màu chủ đạo */
+    padding: 10px 30px; /* Tăng padding ngang */
+    display: flex; /* Sử dụng Flexbox để sắp xếp */
+    justify-content: space-between; /* Đẩy logo và links ra hai bên */
+    align-items: center; /* Căn giữa các mục theo chiều dọc */
+    position: fixed; /* Giữ taskbar cố định ở trên cùng */
+    width: 100%; /* Chiều rộng đầy đủ */
+    top: 0; /* Dính vào cạnh trên */
+    left: 0; /* Dính vào cạnh trái */
+    box-sizing: border-box; /* Tính cả padding vào kích thước chiều rộng */
+    z-index: 1000; /* Đảm bảo taskbar luôn ở trên cùng */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ tạo độ sâu */
+}
+
+/* Container và Liên kết Logo */
+.logo-container {
+    padding-right: 50px;
+}
+
+.logo-link {
+    display: flex; /* Căn chỉnh hình ảnh và văn bản theo hàng ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    text-decoration: none; /* Bỏ gạch chân liên kết */
+    gap: 10px; /* Khoảng cách giữa logo và chữ JAED */
+}
+
+/* Hình ảnh Logo */
+.logo-taskbar {
+    height: 70px; /* Chiều cao cố định */
+    width: auto; /* Giữ tỷ lệ khung hình */
+    display: block; /* Tránh khoảng trống thừa bên dưới ảnh */
+}
+
+/* Chữ "JAED" bên cạnh logo */
+.logo-link p {
+    font-size: 24px; /* Kích thước chữ lớn */
+    font-weight: 700; /* Độ đậm */
+    color: #FFFFFF; /* Màu trắng để nổi bật trên nền xanh */
+    margin: 0; /* Xóa margin mặc định của thẻ <p> */
+}
+
+
+/* Danh sách Liên kết Điều hướng */
+.nav-links {
+    list-style: none; /* Bỏ dấu chấm đầu dòng */
+    display: flex; /* Hiển thị các mục theo hàng ngang */
+    gap: 35px; /* Khoảng cách giữa các liên kết */
+    margin: 0; /* Bỏ margin mặc định */
+    padding: 0; /* Bỏ padding mặc định */
+}
+
+/* Các Liên kết Điều hướng Riêng lẻ */
+.nav-links li a {
+    color: #FFFFFF; /* Màu trắng để tương phản trên nền Olive Green */
+    text-decoration: none; /* Bỏ gạch chân */
+    font-size: 17px; /* Kích thước chữ điều chỉnh nhẹ */
+    font-weight: 500; /* Hơi đậm hơn một chút */
+    padding: 5px 0; /* Thêm padding dọc để tăng vùng click */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà */
+    border-bottom: 2px solid transparent; /* Chuẩn bị cho hiệu ứng hover */
+}
+
+/* Trạng thái Hover/Focus của Liên kết Điều hướng */
+.nav-links li a:hover,
+.nav-links li a:focus { /* Thêm :focus để hỗ trợ truy cập */
+    color: #D4A373; /* Golden Yellow - Màu nhấn khi hover */
+    /* Tùy chọn: Thêm hiệu ứng gạch chân khi hover */
+    /* border-bottom: 2px solid #D4A373; */
+}
+
+/* Tùy chọn: Kiểu cho liên kết đang hoạt động (cần JS hoặc logic phía server) */
+/*
+.nav-links li a.active {
+    color: #D4A373;
+    font-weight: bold;
+}
+*/

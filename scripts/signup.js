@@ -1,4 +1,4 @@
-document.getElementById('signup-form').addEventListener('submit', function(e) {
+document.getElementById('login-form').addEventListener('submit', function(e) {
     e.preventDefault(); // Ngăn chặn việc gửi form mặc định
 
     // Lấy thông tin từ các trường input và loại bỏ khoảng trắng ở đầu và cuối
@@ -15,10 +15,10 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
     // Lấy thông tin người dùng hiện có trong localStorage
     let users = JSON.parse(localStorage.getItem('users')) || [];
 
-    // Kiểm tra nếu email đã được sử dụng
-    const userExists = users.some(user => user.email === email);
+    // Kiểm tra nếu tên đã được sử dụng
+    const userExists = users.some(user => user.username === username);
     if (userExists) {
-        alert('Email này đã được sử dụng!');
+        alert('Tên này đã được sử dụng!');
     } else {
         // Lưu thông tin người dùng vào mảng users
         const newUser = {
