@@ -1,0 +1,118 @@
+/* Đặt nền và căn giữa toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F9F6EF;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Container cho form đăng nhập */
+.login-container {
+    background-color: #fff;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cấu trúc Flexbox cho row */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Cột cho logo */
+.col {
+    flex-grow: 1;
+}
+
+/* Logo */
+.logo img {
+    width: 90px;
+    height: auto;
+}
+
+/* Tiêu đề */
+h1 {
+    font-size: 36px;
+    color: #718355;
+    margin: 0;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* Cải thiện các input trường */
+input {
+    width: 90%; /* Đảm bảo input chiếm hết chiều rộng của container */
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Điều chỉnh cho placeholder */
+input::placeholder {
+    text-align: left; /* Căn trái placeholder */
+    color: #999;
+}
+
+/* Nút đăng nhập */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #D4A373;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #A23E48;
+    transform: scale(1.05);
+}
+
+/* Liên kết đăng ký */
+.donotaccount {
+    margin-top: 15px;
+}
+
+.donotaccount a {
+    color: #718355;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.donotaccount a:hover {
+    text-decoration: underline;
+}
