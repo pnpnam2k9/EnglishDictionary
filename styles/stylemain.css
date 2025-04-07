@@ -1,16 +1,17 @@
+/* Cấu hình cơ bản của body */
 body {
     margin: 0; /* Xóa margin mặc định */
     font-family: sans-serif; /* Font chữ cơ bản */
     background-color: #F9F6EF; /* Light Beige - Màu nền */
     color: #333333; /* Dark Gray - Màu chữ chính */
-    /* Thêm padding-top bằng hoặc lớn hơn chiều cao taskbar để tránh nội dung bị che */
-    padding-top: 70px; /* Điều chỉnh giá trị này dựa trên chiều cao cuối cùng của taskbar */
+    padding-top: 10px; /* Điều chỉnh lại giá trị cho phù hợp với chiều cao của taskbar */
+    box-sizing: border-box; /* Đảm bảo padding và border được tính vào kích thước phần tử */
 }
 
 /* Thanh Taskbar */
 .taskbar {
     background-color: #718355; /* Olive Green - Màu chủ đạo */
-    padding: 10px 30px; /* Tăng padding ngang */
+    padding: 15px 30px; /* Tăng padding để taskbar có chiều cao đủ lớn */
     display: flex; /* Sử dụng Flexbox để sắp xếp */
     justify-content: space-between; /* Đẩy logo và links ra hai bên */
     align-items: center; /* Căn giữa các mục theo chiều dọc */
@@ -23,11 +24,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ tạo độ sâu */
 }
 
-/* Container và Liên kết Logo */
-.logo-container {
-    padding-right: 50px;
-}
-
+/* Logo trong Taskbar */
 .logo-link {
     display: flex; /* Căn chỉnh hình ảnh và văn bản theo hàng ngang */
     align-items: center; /* Căn giữa theo chiều dọc */
@@ -37,7 +34,7 @@ body {
 
 /* Hình ảnh Logo */
 .logo-taskbar {
-    height: 70px; /* Chiều cao cố định */
+    height: 70px; /* Giữ chiều cao cố định */
     width: auto; /* Giữ tỷ lệ khung hình */
     display: block; /* Tránh khoảng trống thừa bên dưới ảnh */
 }
@@ -49,7 +46,6 @@ body {
     color: #FFFFFF; /* Màu trắng để nổi bật trên nền xanh */
     margin: 0; /* Xóa margin mặc định của thẻ <p> */
 }
-
 
 /* Danh sách Liên kết Điều hướng */
 .nav-links {
@@ -64,7 +60,7 @@ body {
 .nav-links li a {
     color: #FFFFFF; /* Màu trắng để tương phản trên nền Olive Green */
     text-decoration: none; /* Bỏ gạch chân */
-    font-size: 17px; /* Kích thước chữ điều chỉnh nhẹ */
+    font-size: 18px; /* Kích thước chữ điều chỉnh nhẹ */
     font-weight: 500; /* Hơi đậm hơn một chút */
     padding: 5px 0; /* Thêm padding dọc để tăng vùng click */
     transition: color 0.3s ease, border-bottom 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà */
@@ -75,14 +71,79 @@ body {
 .nav-links li a:hover,
 .nav-links li a:focus { /* Thêm :focus để hỗ trợ truy cập */
     color: #D4A373; /* Golden Yellow - Màu nhấn khi hover */
-    /* Tùy chọn: Thêm hiệu ứng gạch chân khi hover */
-    /* border-bottom: 2px solid #D4A373; */
 }
 
-/* Tùy chọn: Kiểu cho liên kết đang hoạt động (cần JS hoặc logic phía server) */
-/*
-.nav-links li a.active {
-    color: #D4A373;
-    font-weight: bold;
+/* Ẩn nút menu trên desktop */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
-*/
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Responsive cho mobile */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #718355;
+        position: absolute;
+        top: 80px; /* Điều chỉnh để menu không bị che logo */
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        gap: 10px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        z-index: 20;
+    }
+
+    .nav-links.show {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 12px 0;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .logo-link p {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+}
