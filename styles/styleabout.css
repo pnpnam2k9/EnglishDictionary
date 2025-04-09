@@ -1,0 +1,49 @@
+.about {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px 30px;
+    background-color: #F9F6EF;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+    color: #A23E48;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .about-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 10px; /* ← thêm khoảng cách hai bên cho nội dung */
+  }
+  
+  .about-text {
+    flex: 1 1 45%;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    min-width: 280px;
+    text-align: justify;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .about-content {
+      flex-direction: column;
+      padding: 0 12px; /* ← giữ khoảng cách khi về 1 cột */
+    }
+  
+    .about-text {
+      flex: 1 1 100%;
+    }
+  
+    .about-section {
+      padding: 20px 16px;
+    }
+  }
+  

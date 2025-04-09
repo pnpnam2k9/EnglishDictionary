@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JAED - MainPage</title>
     <link rel="stylesheet" href="styles/stylemain.css">
+    <link rel="stylesheet" href="styles/styleabout.css">
+    <link rel="stylesheet" href="styles/stylesearch.css">
 </head>
 <body>
     <nav class="taskbar">
@@ -19,8 +21,8 @@
         </div>
 
         <ul class="nav-links" id="nav-links">
-            <li><a href="#summary">Sơ lược</a></li>
-            <li><a href="#lookupdictionary">Tra từ điển</a></li>
+            <li><a href="#about">Sơ lược</a></li>
+            <li><a href="#search">Tra từ điển</a></li>
             <li><a href="#randomwords">Từ điển mỗi ngày</a></li>
             <li><a href="#searchhistory">Lịch sử tìm kiếm</a></li>
             <li><a href="#wordstomemorize">Từ Cần Ghi Nhớ</a></li>
@@ -28,6 +30,46 @@
             <li><a href="#logout">Đăng xuất</a></li>
         </ul>
     </nav>
+
+    <section class="#about">
+        <h1 class="about-title">Giới thiệu JAED</h1>
+        <div class="about-content">
+          <p class="about-text">
+            <strong>JAED</strong> (Just A English Dictionary) là một trang từ điển tiếng Anh đơn giản, dễ sử dụng, phù hợp với mọi đối tượng học tập và tra cứu. 
+            Với thiết kế nhẹ, rõ ràng và tiện lợi, JAED giúp bạn nhanh chóng tìm kiếm nghĩa của từ, lưu lại các từ yêu thích và xem lại lịch sử tra cứu bất cứ lúc nào.
+          </p>
+          <p class="about-text">
+            JAED được tạo ra với mục tiêu mang đến một trải nghiệm học từ vựng hiệu quả mà không bị rối bởi quá nhiều tính năng không cần thiết. Chỉ cần gõ – là có kết quả!
+          </p>
+        </div>
+      </section>
+
+      <section class="search">
+        <!-- Cột tra tiếng Anh -->
+        <div class="search-column">
+          <h2 class="search-title">Từ tiếng Anh → tiếng Việt</h2>
+          <div class="search-box">
+            <input type="text" id="word-input-en" placeholder="Nhập từ tiếng Anh...">
+            <button id="search-btn-en">Tra cứu</button>
+          </div>
+          <div id="suggestions" class="suggestions"></div>
+          <div id="result-en" class="search-result"></div>
+        </div>
+      
+        <!-- Cột dịch tiếng Việt -->
+        <div class="search-column">
+          <h2 class="search-title">Từ tiếng Việt → tiếng Anh</h2>
+          <div class="search-box">
+            <input type="text" id="word-input-vi" placeholder="Nhập từ tiếng Việt...">
+            <button id="search-btn-vi">Dịch</button>
+          </div>
+          <div id="result-vi" class="search-result"></div>
+        </div>
+      </section>
+      
+      
     <script src="scripts/hamburgermenu.js"></script>
+    <script src="scripts/translate/englishtovn.js"></script>
+    <script src="scripts/translate/vntoenglish.js"></script>
 </body>
 </html>

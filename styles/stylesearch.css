@@ -1,0 +1,120 @@
+/* Nền tổng thể */
+body {
+    background-color: #F9F6EF;
+  }
+  
+  /* Vùng chứa toàn bộ phần search */
+  .search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+    background-color: #F9F6EF;
+  }
+  
+  /* Mỗi ô tra từ */
+  .search-column {
+    flex: 1 1 400px;
+    max-width: 480px;
+    padding: 25px;
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .search-column:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Tiêu đề mỗi ô */
+  .search-title {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2C3E50;
+  }
+  
+  /* Ô input và nút */
+  .search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .search-box input {
+    flex: 1;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .search-box input:focus {
+    border-color: #A23E48;
+  }
+  
+  .search-box button {
+    padding: 12px 16px;
+    background-color: #A23E48;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .search-box button:hover {
+    background-color: #642f34;
+  }
+  
+  /* Kết quả hiển thị */
+  .search-result {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 12px;
+    white-space: pre-line;
+  }
+  .suggestions {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    max-height: 120px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 1rem;
+    color: #333;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .suggestions div {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .suggestions div:hover {
+    background-color: #f0f0f0;
+  }
+  
+  
+  /* Responsive: 1 cột khi màn nhỏ */
+  @media (max-width: 768px) {
+    .search {
+      align-items: center;
+    }
+  
+    .search-column {
+      max-width: 90%;
+    }
+  }
+  
