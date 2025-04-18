@@ -1,0 +1,117 @@
+/* === Popup ghi nhớ === */
+.memorized-popup {
+    position: fixed;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fffef9;
+    border: 2px solid #ddd;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    max-width: 400px;
+    width: 90%;
+  }
+  .memorized-popup.hidden {
+    display: none;
+  }
+  #close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #aa3333;
+  }
+  .memorized-popup-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* === Danh sách từ cần ghi nhớ chung === */
+  .memorized-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .memorized-list li {
+    background-color: #f6f4ec;
+    padding: 0.75rem 1rem;
+    margin: 0.4rem 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+  }
+  .memorized-list .remove-btn {
+    background-color: transparent;
+    border: none;
+    color: #b03939;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  /* === Phần ghi nhớ ở dưới === */
+  .memorized-section {
+    padding: 2rem;
+    background-color: #fdfcf6;
+  }
+  .memorized-section-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .memorized-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: all 0.5s ease;
+    z-index: 1000;
+  }
+  
+  .memorized-popup.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  .remove-btn {
+    margin-left: 10px;
+    cursor: pointer;
+    color: red;
+    background: none;
+    border: none;
+    font-size: 16px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .memorized-popup {
+      padding: 1rem 1.2rem;
+    }
+    .memorized-popup-title,
+    .memorized-section-title {
+      font-size: 1.2rem;
+    }
+    .memorized-list li {
+      font-size: 0.95rem;
+      padding: 0.5rem 0.75rem;
+    }
+  }
+  

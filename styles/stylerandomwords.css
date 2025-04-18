@@ -1,0 +1,74 @@
+.randomwords {
+    padding: 40px 20px;
+    background-color: #F9F6EF;
+    border-top: 3px solid #D4A373;
+    border-bottom: 3px solid #D4A373;
+  }
+  
+  .randomwords-tilte {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #A23E48;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .randomwords-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  .randomwords-card div {
+    background-color: #fff;
+    border-left: 6px solid #718355;
+    border-radius: 10px;
+    padding: 16px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .randomwords-card div:hover {
+    transform: translateY(-4px);
+  }
+  
+  .randomwords-card h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #A23E48;
+  }
+  
+  .randomwords-card p {
+    margin: 6px 0;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  /* Responsive cho màn hình nhỏ */
+  @media (max-width: 768px) {
+    .randomwords-card {
+      grid-template-columns: 1fr;
+    }
+  
+    .randomwords-tilte {
+      font-size: 24px;
+    }
+  
+    .randomwords-card div {
+      padding: 14px 16px;
+    }
+  
+    .randomwords-card h3 {
+      font-size: 18px;
+    }
+  
+    .randomwords-card p {
+      font-size: 15px;
+    }
+  }
+  

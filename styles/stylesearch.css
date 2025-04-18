@@ -11,11 +11,12 @@ body {
     gap: 40px;
     padding: 40px 20px;
     background-color: #F9F6EF;
+    align-items: flex-start;
   }
   
   /* Mỗi ô tra từ */
   .search-column {
-    flex: 1 1 400px;
+    flex: 1 1 45%;
     max-width: 480px;
     padding: 25px;
     border-radius: 16px;
@@ -114,7 +115,7 @@ body {
     }
   
     .search-column {
-      max-width: 90%;
+      flex: 1 1 100%;
     }
   }
   

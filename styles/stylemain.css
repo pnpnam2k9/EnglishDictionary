@@ -24,6 +24,14 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ tạo độ sâu */
 }
 
+.taskbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s ease;
+  }
+
 /* Logo trong Taskbar */
 .logo-link {
     display: flex; /* Căn chỉnh hình ảnh và văn bản theo hàng ngang */

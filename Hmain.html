@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles/stylemain.css">
     <link rel="stylesheet" href="styles/styleabout.css">
     <link rel="stylesheet" href="styles/stylesearch.css">
+    <link rel="stylesheet" href="styles/stylerandomwords.css">
+    <link rel="stylesheet" href="styles/stylewordstomemorize.css">
 </head>
 <body>
     <nav class="taskbar">
@@ -24,14 +26,13 @@
             <li><a href="#about">Sơ lược</a></li>
             <li><a href="#search">Tra từ điển</a></li>
             <li><a href="#randomwords">Từ điển mỗi ngày</a></li>
-            <li><a href="#searchhistory">Lịch sử tìm kiếm</a></li>
             <li><a href="#wordstomemorize">Từ Cần Ghi Nhớ</a></li>
-            <li><a href="#minigame">Mini game</a></li>
-            <li><a href="#logout">Đăng xuất</a></li>
+            <li><a href="Hminigame.html">Mini game</a></li>
+            <li><a href="Hlogin.html">Đăng xuất</a></li>
         </ul>
     </nav>
 
-    <section class="#about">
+    <section id="about" class="about">
         <h1 class="about-title">Giới thiệu JAED</h1>
         <div class="about-content">
           <p class="about-text">
@@ -44,13 +45,14 @@
         </div>
       </section>
 
-      <section class="search">
+      <section id="search" class="search">
         <!-- Cột tra tiếng Anh -->
         <div class="search-column">
           <h2 class="search-title">Từ tiếng Anh → tiếng Việt</h2>
           <div class="search-box">
             <input type="text" id="word-input-en" placeholder="Nhập từ tiếng Anh...">
             <button id="search-btn-en">Tra cứu</button>
+            <button id="save-word-en">Lưu từ</button>
           </div>
           <div id="suggestions" class="suggestions"></div>
           <div id="result-en" class="search-result"></div>
@@ -62,14 +64,37 @@
           <div class="search-box">
             <input type="text" id="word-input-vi" placeholder="Nhập từ tiếng Việt...">
             <button id="search-btn-vi">Dịch</button>
+            <button id="save-word-vi">Lưu từ</button>
           </div>
           <div id="result-vi" class="search-result"></div>
         </div>
-      </section>
-      
-      
-    <script src="scripts/hamburgermenu.js"></script>
+      </section>      
+
+      <section id="randomwords" class="randomwords">
+        <h2 class="randomwords-tilte">Từ điển mỗi ngày</h2>
+        <div class="randomwords-card" id="daily-word-card">
+          <!-- Nội dung sẽ được thêm tự động bằng JavaScript -->
+        </div>
+      </section>      
+
+      <!-- Popup hiển thị từ đã ghi nhớ -->
+    <div id="memorized-popup" class="memorized-popup hidden">
+      <button id="close-popup" title="Đóng">×</button>
+      <h3 class="memorized-popup-title">Từ đã ghi nhớ</h3>
+      <ul id="memorized-list-popup" class="memorized-list"></ul>
+    </div>
+
+    <!-- Phần dưới để hiển thị danh sách từ cần ghi nhớ -->
+    <section id="wordstomemorize" class="memorized-section">
+      <h2 class="memorized-section-title">Từ cần ghi nhớ</h2>
+      <ul id="memorized-list-section" class="memorized-list"></ul>
+    </section>
+
+
+    <script src="scripts/interface/hamburgermenu.js"></script>
     <script src="scripts/translate/englishtovn.js"></script>
     <script src="scripts/translate/vntoenglish.js"></script>
+    <script src="scripts/tools/randomwords.js"></script>
+    <script src="scripts/tools/wordstomemorize.js"></script>
 </body>
 </html>

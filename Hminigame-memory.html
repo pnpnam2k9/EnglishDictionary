@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Game Từ Vựng</title>
+    <link rel="stylesheet" href="styles/minigame-memory.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Trò chơi Từ Vựng</h1>
+
+    <!-- Khu vực trò chơi -->
+    <div id="word-list" class="hidden">
+        <h2>5 từ vựng:</h2>
+        <ul id="word-display"></ul>
+    </div>
+
+    <div id="answer-phase" class="hidden">
+        <h2>Trả lời:</h2>
+        <form id="answer-form">
+            <div id="timer">Thời gian: 25</div>
+            <input type="text" placeholder="Nhập nghĩa của từ" id="answer-input">
+        </form>
+    </div>
+
+    <!-- Kết quả và điểm -->
+    <div id="result" class="hidden">
+        <h2>Kết quả</h2>
+        <p id="score">Điểm của bạn: 0</p>
+        <button id="restart-btn">Chơi lại</button>
+    </div>
+
+    <!-- Bảng xếp hạng -->
+    <div id="leaderboard">
+        <h2>Bảng Xếp Hạng</h2>
+        <ul id="ranking-list">
+            <!-- Bảng xếp hạng sẽ được hiển thị ở đây -->
+        </ul>
+    </div>
+
+    <!-- Nút bắt đầu trò chơi -->
+    <button id="start-game-btn">Bắt đầu</button>
+</div>
+
+<script src="scripts/tools/minigame-memory.js"></script>
+</body>
+</html>
